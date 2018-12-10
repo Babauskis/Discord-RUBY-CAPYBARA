@@ -6,14 +6,15 @@ require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'json'
 require 'base64'
+require 'webdrivers'
 
 #SitePrism.configure do |config|
 #  config.use_implicit_waits = false
 #end
-#Capybara.app_host = 'https://www.discordapp.com'
-Capybara.app_host = ENV['HOST']
-#Capybara.save_path = 'report/'
-Capybara.save_path = ENV['REPORT_PATH']
+Capybara.app_host = 'https://www.discordapp.com'
+#Capybara.app_host = ENV['HOST']
+Capybara.save_path = 'report/'
+#Capybara.save_path = ENV['REPORT_PATH']
 Capybara::Screenshot.autosave_on_failure = false
 Capybara::Screenshot.prune_strategy = :keep_last_run
 # =================================================================== #
